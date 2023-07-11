@@ -6,3 +6,8 @@
 - original blazer colourscheme can be found at [gogh-co.github.io](https://gogh-co.github.io/Gogh/), [and their github here](https://github.com/Gogh-Co/Gogh)
 
 - this is primarily a recolour with the blazer theme, but with some tweaks to the UI here and there.
+
+- overview of changes:
+  - reset heading sizes
+  - recoloured to blazer
+  - shortened tab bar height, removed tab bar outline, changed tab bar design
