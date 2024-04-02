@@ -5,21 +5,24 @@
 
 - original blazer colourscheme can be found at [gogh-co.github.io](https://gogh-co.github.io/Gogh/), [and their github here](https://github.com/Gogh-Co/Gogh)
 
-- this is primarily a recolour with the blazer theme, but with some tweaks to the UI here and there.
+- this is primarily a recolour with the blazer theme, but with many tweaks to the UI
 
-- overview of changes:
-  - reset heading sizes
-  - recoloured to blazer
-  - shortened tab bar height, removed tab bar outline, changed tab bar design
-  - signicantly reduced padding/margins on headings
-  - reduced padding in callouts
+
+## features
+- reset heading sizes
+- recoloured to blazer (light and dark mode)
+- shortened tab bar height, removed tab bar outline, changed tab bar design
+- signicantly reduced padding/margins on headings
+- reduced padding in callouts
+- custom callout definitions
+- pdf export with same styling
 
 ## screenshots
 ### LIGHT THEME
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/f83f36b9-8d39-40bd-9101-fb27e6216749">
+<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/95598ae0-a0c3-4edd-8ce5-84aa7cbb1cf4">
 
 ### DARK THEME
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/6f8c924c-ebb0-4d6c-b812-44b055ead31e">
+<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/6ed68ed4-269d-4195-866c-65c01919b3f0">
 
 ### GRAPH
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/53edc5e9-0bc9-47c6-9581-7d257de8cd7a">
+<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/1a952f9e-c501-4bbe-bbf4-b583dd46ad80">
