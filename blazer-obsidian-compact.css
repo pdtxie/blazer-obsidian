@@ -18,7 +18,7 @@ body {
   --inline-title-margin-bottom: 1rem;
   /* Line widths */
   --line-width: 40rem;
-  --line-height: 1.5;
+  --line-height: 1.4;
   --max-width: 88%;
   --max-col-width: 18em;
   /* Icons */
@@ -1012,6 +1012,11 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   margin-left: -0.75em;
   letter-spacing: 0.05em;
   font-variant-caps: all-small-caps; }
+
+.callout {
+  padding: 1em !important;
+}
+
 .callouts-outlined .callout {
   overflow: visible;
   --callout-border-width: 1px;
@@ -1019,10 +1024,15 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active {
   --callout-title-size: 0.8em;
   --callout-blend-mode: normal;
   background-color: transparent; }
+
 .callouts-outlined .cm-embed-block.cm-callout {
-  padding-top: 12px; }
+  padding-top: 12px; 
+}
+
 .callouts-outlined .callout-content .callout {
-  margin-top: 18px; }
+  margin-top: 18px; 
+}
+
 
 /* Checklists, task lists, checkboxes */
 body {
@@ -5040,6 +5050,10 @@ body.theme-light {
   height: 32px;
 }
 
+.workspace-tab-header-container > .workspace-tab-header-container-inner:first-child {
+  margin-left: 4px !important;
+}
+
 .workspace-tab-header-container-inner {
   margin-top: 4px !important;
   margin-bottom: 4px !important;
@@ -5066,14 +5080,13 @@ body.theme-light {
 }
 
 .workspace-ribbon::before {
-  height: 31px !important;
+  height: 32px !important;
 }
 
 .workspace-tab-header {
   box-shadow: none !important;
 
   padding: 0px !important;
-
   border-bottom-left-radius: 4px !important;
   border-bottom-right-radius: 4px !important;
   border-top-left-radius: 4px !important;
@@ -5097,3 +5110,56 @@ body.theme-light {
 .workspace-tab-header-new-tab > .clickable-icon {
   padding: 2.5px !important;
 }
+
+
+
+
+
+/* NOTE: REMOVE MATH PADDING */
+.MathJax {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* NOTE: REMOVE CALLOUT MARGIN*/
+.callout-content > h4 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > h3 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > h5 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > h2 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > h1 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > h6 {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > ul {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > p {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > ol {
+  margin-top: 8px; margin-bottom: 0px;
+}
+
+.callout-content > .callout {
+  margin-top: 16px !important;
+}
+
+
