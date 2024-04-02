@@ -11,3 +11,10 @@
   - reset heading sizes
   - recoloured to blazer
   - shortened tab bar height, removed tab bar outline, changed tab bar design
+
+## screenshots
+### LIGHT THEME
+<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/683a9520-2d58-4fea-8f40-df7db183290e">
+
+### DARK THEME
+<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/6f8c924c-ebb0-4d6c-b812-44b055ead31e">
