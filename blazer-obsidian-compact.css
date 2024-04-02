@@ -82,8 +82,7 @@ body {
   --accent-l: 50%;
   /* Accent lightness */ }
 
-.theme-dark,
-.theme-light {
+.theme-dark {
   --color-red-rgb: 184, 122, 122;
   --color-orange-rgb: 184, 184, 122;
   --color-yellow-rgb: 184, 184, 122;
@@ -99,95 +98,50 @@ body {
   --color-green: #7ab87a;
   --color-cyan: #7ab8b8;
   --color-blue: #7a7ab8;
-  --color-purple: #b87ab8;
-  --color-pink: #b87ab8; }
+  --color-purple: #7a7ab8;
+  --color-pink: #b87ab8;
+}
+
+.theme-light {
+  --color-red-rgb: 140, 76, 76;
+  --color-orange-rgb: 140, 140, 76;
+  --color-yellow-rgb: 140, 140, 76;
+  --color-green-rgb: 76, 140, 76;
+  --color-cyan-rgb: 76, 140, 140;
+  --color-blue-rgb: 76, 76, 141;
+  --color-purple-rgb: 76, 76, 141;
+  --color-pink-rgb: 140, 76, 140;
+
+  --color-red: #8c4c4c;
+  --color-orange: #8c8c4c;
+  --color-yellow: #8c8c4c;
+  --color-green: #4C8C4C;
+  --color-cyan: #4C8C8C;
+  --color-blue: #4C4C8D;
+  --color-purple: #4C4C8D;
+  --color-pink: #8C4C8C;
+}
 
 .theme-light,
 .theme-light.minimal-default-light,
 body .excalidraw {
-  --bg1:white;
-  --bg2:
-    hsl(
-    var(--base-h),
-    var(--base-s),
-    var(--base-l)
-  );
-  --bg3:
-    hsla(
-    var(--base-h),
-    var(--base-s),
-    calc(var(--base-l) - 50%),
-    0.12
-  );
-  --ui1:
-    hsl(
-    var(--base-h),
-    var(--base-s),
-    calc(var(--base-l) - 6%)
-  );
-  --ui2:
-    hsl(
-    var(--base-h),
-    var(--base-s),
-    calc(var(--base-l) - 12%)
-  );
-  --ui3:
-    hsl(
-    var(--base-h),
-    var(--base-s),
-    calc(var(--base-l) - 20%)
-  );
-  --tx1:
-    hsl(
-    var(--base-h),
-    var(--base-s),
-    calc(var(--base-l) - 90%)
-  );
-  --tx2:
-    hsl(
-    var(--base-h),
-    calc(var(--base-s) - 20%),
-    calc(var(--base-l) - 45%)
-  );
-  --tx3:
-    hsl(
-    var(--base-h),
-    calc(var(--base-s) - 10%),
-    calc(var(--base-l) - 25%)
-  );
-  --tx4:
-    hsl(
-    var(--base-h),
-    calc(var(--base-s) - 10%),
-    calc(var(--base-l) - 60%)
-  );
-  --ax1:
-    hsl(
-    var(--accent-h),
-    var(--accent-s),
-    var(--accent-l)
-  );
-  --ax2:
-    hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) - 8%)
-  );
-  --ax3:
-    hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) + 6%)
-  );
-  --hl1:
-    hsla(
-    var(--accent-h),
-    50%,
-    calc(var(--base-l) - 20%),
-    30%
-  );
-  --hl2:rgba(255, 225, 0, 0.5);
-  --sp1: white; }
+  --bg1: #F5F5FA;
+  --bg2: #EEEEF5;
+  --bg3: #E4E4ED;
+  --ui1: #D8D8E3;
+  --ui2: #E4E4ED;
+  --ui3: #EEEEF5;
+  --tx1: #0C0C12;
+  --tx2: #3E3E5C;
+  --tx3: grey;
+  --tx4: grey;
+  --ax1: #7A7AB8;
+  --ax2: #7A7AB8;
+  --ax3: var(--ui1);
+  --hl1: #D8D8E388;
+  --hl2: #7A7AB844;
+  --sp1: var(--bg2);
+}
 
 .theme-light.minimal-light-contrast .titlebar,
 .theme-light.minimal-light-contrast.minimal-status-off .status-bar,
@@ -203,15 +157,15 @@ body .excalidraw {
   --ui2: #2B2B40;
   --ui3: #15151F;
   --tx1: #F5F5FA;
-  --tx2: #DCDCE0;
+  --tx2: #D8D8E3;
   --tx3: grey;
   --tx4: grey;
   --ax1: #7A7AB8;
   --ax2: #7A7AB8;
-  --ax3: #3E3E5C;
-  --hl1: #252537;
-  --hl2: #7A7AB888;
-  --sp1: #15151F; 
+  --ax3: var(--ui1);
+  --hl1: #3E3E5C88;
+  --hl2: #7A7AB844;
+  --sp1: var(--bg2);
 }
 
 .theme-light.minimal-light-white {
@@ -237,32 +191,32 @@ body .excalidraw {
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 75%)
-  );
+    );
   --tx2:hsl(
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 50%)
-  );
+    );
   --tx3:hsl(
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 25%)
-  );
+    );
   --ui1:hsl(
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 12%)
-  );
+    );
   --ui2:hsl(
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 20%)
-  );
+    );
   --ui3:hsl(
     var(--base-h),
     var(--base-s),
     calc(var(--base-d) + 30%)
-); }
+    ); }
 
 /* Map colors to semantic Obsidian names */
 .theme-light {
@@ -2295,7 +2249,7 @@ body {
     var(--frame-background-s),
     calc(var(--frame-background-l) - 6.5%),
     1
-  );
+    );
   --frame-muted-color:
     hsl(
     var(--frame-background-h),
@@ -2312,7 +2266,7 @@ body {
     calc(var(--frame-background-s) - 2%),
     calc(var(--frame-background-l) + 6.5%),
     1
-  );
+    );
   --frame-muted-color:
     hsl(
     var(--frame-background-h),
@@ -2656,7 +2610,7 @@ body.minimal-focus-mode.show-view-header .view-content {
     50%,
     80%,
     20%
-); }
+    ); }
 
 .theme-dark.row-hover,
 .theme-dark .row-hover {
@@ -2666,7 +2620,7 @@ body.minimal-focus-mode.show-view-header .view-content {
     30%,
     40%,
     20%
-); }
+    ); }
 
 /* Dark mode images  */
 /* MIT License | Copyright (c) Stephan Ango (@kepano) */
@@ -5168,28 +5122,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
 }
 
-/* INFO: from https://forum.obsidian.md/t/how-to-make-reader-mode-and-edit-mode-line-height-look-the-same/59217/3 */
-body {
-  --margin-in-between: 0em;
-}
-/* adjust margin between paragraph and ul/ol */
-div:has(> p) ~ div:has(> p) p {
-  margin-top: calc(var(--line-height-normal) * 0.88rem);
-  margin-block-end: var(--margin-in-between);
-}
-div:has(p) + div:has(ul,ol) > :is(ul,ol) {
-  margin-block-start: var(--margin-in-between);
-}
-/* adjust margin between headers and ul/ol. Had to use 0.88rem because default app's line-height somehow uses hardcoded 1.4 instead on line-height-normal: 1.5 */
-.markdown-rendered :is(h1,h2,h3,h4,h5,h6) {
-  margin-top: calc(var(--line-height-normal) * 0.88rem);
-  margin-bottom: var(--margin-in-between);
-}
-.markdown-rendered :has([data-heading]) + div:has(ul,ol) :is(ul,ol) {
-  margin-top: var(--margin-in-between);
-}
-
-
 /* NOTE: custom sizes */
 body {
   --h1-size: 1.8em;
@@ -5199,7 +5131,183 @@ body {
   --h5-size: 1.08em;
   --h6-size: 1em;
   --h6-color: var(--tx2);
-
-  --callout-title-size: var(--h5-size);
 }
 
+/* INFO: from https://forum.obsidian.md/t/how-to-make-reader-mode-and-edit-mode-line-height-look-the-same/59217/3 */
+
+/* adjust margin between paragraph and ul/ol */
+div:has(> p) ~ div:has(> p) p {
+  margin-top: 12px;
+  margin-block-end: 0;
+}
+div:has(p) + div:has(ul,ol) > :is(ul,ol) {
+  margin-block-start: 0;
+}
+/* adjust margin between headers and ul/ol. Had to use 0.88rem because default app's line-height somehow uses hardcoded 1.4 instead on line-height-normal: 1.5 */
+p {
+  margin: 0 !important;
+}
+
+.markdown-rendered div:has(h1, h2, h3, h4, h5, h6) {
+  margin-top: 1em !important;
+}
+
+.markdown-rendered :is(h1,h2,h3,h4,h5,h6,p) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-rendered div:has(ul,ol) :is(ul,ol) {
+  margin-top: 0;
+}
+
+.callout {
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+
+/* INFO: add spacing/padding to tags */
+.cm-line:has(span.cm-hashtag) {
+  line-height: 1.75em !important;
+}
+
+p:has(a.tag) {
+  margin-bottom: 0.5em !important;
+  line-height: 1.75em !important;
+}
+
+
+/* NOTE: change bullet to dash */
+li::marker,
+.markdown-reading-view ul li .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line .list-bullet::after {
+  height: 1px !important;
+  width: 6px !important;
+  border-radius: 0 !important;
+  background-color: var(--tx2);
+  color: var(--tx2) !important;
+}
+
+.cm-formatting-list.cm-formatting-list-ul {
+  margin-right: 8px;
+}
+.markdown-rendered .list-bullet {
+  margin-right: 8px;
+}
+
+
+.callout-title {
+  column-gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+
+/* NOTE: custom callout icons */
+.callout svg {
+  fill: none !important;
+}
+
+.callout {
+  --callout-border-width: 1px;
+}
+
+.callout-content {
+  overflow-y: hidden;
+}
+
+.callout-title-inner {
+  text-transform: lowercase;
+}
+
+.callout[data-callout="formula"] {
+  --callout-color: var(--color-purple-rgb);
+  --callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3"/><path d="M9 11.2h5.7"/></svg>';
+}
+
+.callout[data-callout="info"],
+.callout[data-callout="theorem"],
+.callout[data-callout="method"],
+.callout[data-callout="definition"],
+.callout[data-callout="algorithm"] {
+  --callout-color: var(--color-cyan-rgb);
+  --callout-icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-text"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>';
+}
+
+.callout[data-callout="example"],
+.callout[data-callout="eg:"],
+.callout[data-callout="proof"] {
+  --callout-color: var(--color-green-rgb);
+  --callout-icon: move-right;
+}
+
+@media screen {
+  /* NOTE: callout bullet */
+  .callout-content li {
+    position: relative;
+    list-style-type: "";
+  }
+
+  .callout-content li:before {
+    content: "";
+    position: absolute;
+    left: -1em;
+    top: 0.725em;
+
+    background-color: var(--tx2);
+
+    display: inline-block;
+
+    width: 6px;
+    height: 1px;
+    border-radius: 0;
+  }
+}
+
+/* NOTE: tag font */
+.cm-hashtag,
+a.tag {
+  font-family: var(--font-monospace) !important;
+  margin-bottom: 12px !important;
+}
+
+
+/* NOTE: heavily modified version of https://github.com/NicklasVraa/Obsidian-academic-export */
+@media print {
+  @page {
+    margin: 1.75cm !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after:avoid;
+    page-break-inside:avoid;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  h1 {
+    text-align: center !important;
+    margin-top: 0px !important;
+    margin-bottom: 0.75em !important;
+  }
+
+  ul, ol, dl {
+    page-break-before: avoid !important;
+    line-height: 1.1 !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  ul li {
+    list-style-type: none !important;
+    position: relative !important;
+  }
+
+  ul li::before {
+    color: var(--tx2) !important;
+    content: '–' !important;
+    position: absolute !important;
+    left: -1.15em !important;
+  }
+}
