@@ -1,0 +1,838 @@
+@charset "UTF-8";
+
+body {
+	/* Blockquotes */
+	--blockquote-style:normal;
+	--blockquote-color: var(--text-muted);
+	--blockquote-border-thickness: 1px;
+	--blockquote-border-color: var(--quote-opening-modifier);
+
+	/* Embeds */
+	--embed-block-shadow-hover: none;
+
+	/* Font weights */
+	--normal-weight: 400;
+	--bold-weight: 600;
+	--link-weight: inherit;
+
+	/* Headings */
+	--inline-title-margin-bottom: 1rem;
+
+	/* Line widths */
+	--line-width: 40rem;
+	--line-height: 1.4;
+	--max-width: 88%;
+	--max-col-width: 18em;
+
+	/* Icons */
+	--icon-muted: 0.5;
+
+	/* Quotes and transclusions */
+	--nested-padding:1.1em;
+
+	/* Lists */
+	--folding-offset: 32px;
+	--list-edit-offset: 0.5em;
+	--list-indent: 2em;
+	--list-spacing: 0.075em;
+	--input-height: 32px;
+	--header-height: 32px;
+
+	/* Mobile sidebars */
+	--mobile-left-sidebar-width: 280pt;
+	--mobile-right-sidebar-width: 240pt;
+	--top-left-padding-y:0px;
+
+	/* Image opacity in dark mode */
+	--image-muted:0.7;
+
+	/* Spacing */
+	--heading-spacing: 2.25rem;
+	--p-spacing: 1.5em;
+	--border-width: 1px;
+	--table-border-width: var(--border-width);
+
+	/* Readable line length off */
+	--file-margins: var(--size-4-2) var(--size-4-12);
+
+	/* font features for favorit font */
+	font-feature-settings: 'calt' on, 'dlig' off, 'tnum' off, 'case' on, 'ss01' on, 'ss02' off, 'ss07' on, 'ss08' on, 'ss03' on, 'cv11' on, 'cv08' on, 'cv05' on;
+}
+
+.mod-macos {
+	--top-left-padding-y: 24px; 
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+	.is-phone {
+		--border-width: 0.75px; } }
+/* Dynamic colors
+
+Most colors are driven from the following values, meaning that 
+the backgrounds, borders, and various shades are 
+automatically generated.
+
+- Base color is used for the backgrounds, text and borders.
+- Accent color is used for links and some interactive elements.
+
+The colors use HSL (hue, saturation, lightness)
+
+- Hue (0-360 degrees):0 is red, 120 is green, and 240 is blue
+- Saturation (0-100%):0% is desaturated, 100% is full saturation
+- Lightness (0-100%):0% is black, 100% is white
+
+*/
+body {
+	--base-h: 0;
+	/* Base hue */
+	--base-s: 0%;
+	/* Base saturation */
+	--base-l: 96%;
+	/* Base lightness - 100 is white */
+	--accent-h: 201;
+	/* Accent hue */
+	--accent-s: 17%;
+	/* Accent saturation */
+	--accent-l: 50%;
+	/* Accent lightness */ }
+
+.theme-dark {
+	--color-red-rgb: 184, 122, 122;
+	--color-orange-rgb: 184, 184, 122;
+	--color-yellow-rgb: 184, 184, 122;
+	--color-green-rgb: 122, 184, 122;
+	--color-cyan-rgb: 122, 184, 184;
+	--color-blue-rgb: 122, 122, 184;
+	--color-purple-rgb: 184, 122, 184;
+	--color-pink-rgb: 184, 122, 184;
+
+	--color-tx1-rgb: 245, 245, 250;
+	--color-tx2-rgb: 216, 216, 227;
+	--color-tx3-rgb: 122, 122, 125;
+
+	--color-red: #b87a7a;
+	--color-orange: #b8b87a;
+	--color-yellow: #b8b87a;
+	--color-green: #7ab87a;
+	--color-cyan: #7ab8b8;
+	--color-blue: #7a7ab8;
+	--color-purple: #7a7ab8;
+	--color-pink: #b87ab8;
+
+	--color-dark-grey: #DCDCE0;
+	--color-light-grey: #262626;
+	--color-bg-grey: #26262633;
+
+	--color-bg-red: #5C2B2B33;
+	--color-bg-orange: #5C5C2B33;
+	--color-bg-yellow: #5C5C2B33;
+	--color-bg-green: #2B5C2B33;
+	--color-bg-cyan: #2B5C5C33;
+	--color-bg-blue: #2B2B5C33;
+	--color-bg-purple: #2B2B5C33;
+	--color-bg-pink: #5C2B5C33;
+}
+
+.theme-light {
+	--color-red-rgb: 140, 76, 76;
+	--color-orange-rgb: 140, 140, 76;
+	--color-yellow-rgb: 140, 140, 76;
+	--color-green-rgb: 76, 140, 76;
+	--color-cyan-rgb: 76, 140, 140;
+	--color-blue-rgb: 76, 76, 141;
+	--color-purple-rgb: 140, 76, 140;
+	--color-pink-rgb: 140, 76, 140;
+
+	--color-tx1-rgb: 12, 12, 18;
+	--color-tx2-rgb: 62, 62, 92;
+	--color-tx3-rgb: 122, 122, 125;
+
+	--color-red: #B87A7A;
+	--color-orange: #B8B87A;
+	--color-yellow: #B8B87A;
+	--color-green: #7AB87A;
+	--color-cyan: #7AB8B8;
+	--color-blue: #7A7AB8;
+	--color-purple: #7A7AB8;
+	--color-pink: #B87AB8;
+
+	--color-dark-grey: #262626;
+	--color-light-grey: #DCDCE0;
+
+	--color-bg-red: #F1E4E4;
+	--color-bg-orange: #F1F1E4;
+	--color-bg-yellow: #F1F1E4;
+	--color-bg-green: #E4F1E4;
+	--color-bg-cyan: #E4F1F1;
+	--color-bg-blue: #E4E4F1;
+	--color-bg-purple: #E4E4F1;
+	--color-bg-pink: #F1E4F1;
+
+
+}
+
+.theme-light,
+.theme-light.minimal-default-light,
+body .excalidraw {
+	--bg1: #F5F5FA;
+	--bg2: #EEEEF5;
+	--bg3: #E4E4ED;
+	--ui1: #D8D8E3;
+	--ui2: #E4E4ED;
+	--ui3: #EEEEF5;
+	--tx1: #0C0C12;
+	--tx2: #3E3E5C;
+	--tx3: #7A7A7D;
+	--tx4: #7A7A7D;
+	--ax1: #7A7AB8;
+	--ax2: #7A7AB8;
+	--ax3: var(--ui1);
+	--hl1: #D8D8E388;
+	--hl2: #7A7AB844;
+	--sp1: var(--bg2);
+}
+
+.theme-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-dark,
+.theme-dark.minimal-default-dark,
+.excalidraw.theme--dark {
+	--accent-l:60%;
+	--base-l:15%;
+	--bg1: #0C0C12;
+	--bg2: #15151F;
+	--bg3: #2B2B40;
+	--ui1: #3E3E5C;
+	--ui2: #2B2B40;
+	--ui3: #15151F;
+	--tx1: #F5F5FA;
+	--tx2: #D8D8E3;
+	--tx3: #7A7A7D;
+	--tx4: #7A7A7D;
+	--ax1: #7A7AB8;
+	--ax2: #7A7AB8;
+	--ax3: var(--ui1);
+	--hl1: #3E3E5C88;
+	--hl2: #7A7AB844;
+	--sp1: var(--bg2);
+}
+
+.theme-light.minimal-light-white {
+	--background-primary: white;
+	--background-secondary: white;
+	--background-secondary-alt: white;
+	--ribbon-background: white;
+	--bg1: white; }
+
+.theme-dark.minimal-dark-black {
+	--base-d:0%;
+	--titlebar-background: black;
+	--background-primary: black;
+	--background-secondary: black;
+	--background-secondary-alt: black;
+	--ribbon-background: black;
+	--background-modifier-hover: hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 10%)) ;
+	--tx1:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 75%));
+	--tx2:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 50%));
+	--tx3:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 25%));
+	--ui1:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 12%));
+	--ui2:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 20%));
+	--ui3:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 30%)); }
+
+/* Map colors to semantic Obsidian names */
+.theme-light {
+	--mono100: black;
+	--mono0: white;
+}
+
+.theme-dark {
+	--mono100: white;
+	--mono0: black;
+}
+
+.theme-light.minimal-light-contrast .titlebar,
+.theme-light.minimal-light-contrast.minimal-status-off .status-bar,
+.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,
+.theme-dark,
+.theme-light {
+	--background-modifier-accent: var(--ax3);
+	--background-modifier-border-focus: var(--ui3);
+	--background-modifier-border-hover: var(--ui2);
+	--background-modifier-border: var(--ui1);
+	--background-modifier-form-field-highlighted: var(--bg1);
+	--background-modifier-form-field: var(--bg1);
+	--background-modifier-success: var(--color-green);
+	--background-modifier-hover: var(--bg3);
+	--background-modifier-active-hover: var(--bg3);
+	--background-primary: var(--bg1);
+	--background-primary-alt: var(--bg2);
+	--background-secondary: var(--bg2);
+	--background-secondary-alt: var(--bg1);
+	--background-table-rows: var(--bg2);
+	--checkbox-color: var(--ax3);
+	--code-normal: var(--tx1);
+	--divider-color: var(--ui1);
+	--frame-divider-color: var(--ui1);
+	--icon-color-active: var(--tx1);
+	--icon-color-focused: var(--tx1);
+	--icon-color-hover: var(--tx2);
+	--icon-color: var(--tx2);
+	--icon-hex: var(--mono0);
+	--interactive-accent-hover: var(--ax1);
+	--interactive-accent: var(--ax3);
+	--interactive-hover: var(--ui1);
+	--list-marker-color: var(--tx3);
+	--modal-border-color: var(--ui2);
+	--nav-item-background-active: var(--bg3);
+	--nav-item-background-hover: var(--bg3);
+	--nav-item-color: var(--tx2);
+	--nav-item-color-active: var(--tx1);
+	--nav-item-color-hover: var(--tx1);
+	--nav-collapse-icon-color: var(--tx2);
+	--nav-collapse-icon-color-collapsed: var(--tx2);
+	--nav-indentation-guide-color: var(--ui1);
+	--prompt-border-color: var(--ui3);
+	--quote-opening-modifier: var(--ui2);
+	--ribbon-background: var(--bg2);
+	--scrollbar-active-thumb-bg: var(--ui1);
+	--scrollbar-bg: transparent;
+	--scrollbar-thumb-bg: var(--ui3);
+	--search-result-background: var(--bg1);
+	--tab-text-color-focused-active: var(--tx1);
+	--tab-outline-color: var(--ui1);
+	--text-accent-hover: var(--ax2);
+	--text-accent: var(--ax1);
+	--text-blockquote: var(--tx2);
+	--text-bold: var(--tx1);
+	--text-code: var(--tx4);
+	--text-error: var(--color-red);
+	--text-faint: var(--tx3);
+	--text-highlight-bg: var(--hl2);
+	--text-italic: var(--tx1);
+	--text-muted: var(--tx2);
+	--text-normal: var(--tx1);
+	--text-on-accent: var(--sp1);
+	--text-selection: var(--hl1);
+	--title-color-inactive: var(--tx2);
+	--title-color: var(--tx1);
+	--titlebar-background: var(--bg2);
+	--titlebar-background-focused: var(--bg2);
+	--titlebar-text-color-focused: var(--tx1);
+	--workspace-background-translucent: hsla(var(--base-h),var(--base-s), var(--base-l), 0.7); }
+
+.theme-light.minimal-light-contrast {
+	--workspace-background-translucent: rgba(0,0,0,0.6); }
+
+.theme-light.minimal-light-contrast .theme-dark {
+	--tab-container-background: var(--bg2);
+	--ribbon-background-collapsed: var(--bg2); }
+
+.theme-light {
+	--interactive-normal: var(--bg1);
+	--interactive-accent-rgb:220, 220, 220;
+	--active-line-bg:rgba(0,0,0,0.035);
+	--background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
+	--text-highlight-bg-active:rgba(0, 0, 0, 0.1);
+	/* Errors */
+	--background-modifier-error:rgba(255,0,0,0.14);
+	--background-modifier-error-hover:rgba(255,0,0,0.08);
+	/* Shadows */
+	--shadow-color:rgba(0, 0, 0, 0.1);
+	--btn-shadow-color:rgba(0, 0, 0, 0.05); }
+
+.theme-dark {
+	--interactive-normal: var(--bg3);
+	--interactive-accent-rgb: 66, 66, 66;
+	--active-line-bg: rgba(255,255,255,0.04);
+	--background-modifier-cover: hsla(var(--base-h),var(--base-s), calc(var(--base-l) - 12%), 0.5);
+	--text-highlight-bg-active:rgba(255, 255, 255, 0.1);
+	/* Errors */
+	--background-modifier-error:rgba(255,20,20,0.12);
+	--background-modifier-error-hover:rgba(255,20,20,0.18);
+	/* Shadows */
+	--background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
+	--shadow-color:rgba(0, 0, 0, 0.3);
+	--btn-shadow-color:rgba(0, 0, 0, 0.2); }
+
+.theme-light.minimal-light-white {
+	--background-table-rows: var(--bg2); }
+
+.theme-light.minimal-light-tonal {
+	--background-primary: var(--bg2);
+	--background-primary-alt: var(--bg3);
+	--background-table-rows: var(--bg3); }
+
+.theme-dark.minimal-dark-tonal {
+	--ribbon-background: var(--bg1);
+	--background-secondary: var(--bg1);
+	--background-table-rows: var(--bg3); }
+
+.theme-dark.minimal-dark-black {
+	--background-primary-alt: var(--bg3);
+	--background-table-rows: var(--bg3);
+	--modal-border: var(--ui2);
+	--active-line-bg:rgba(255,255,255,0.085);
+	--background-modifier-form-field: var(--bg3);
+	--background-modifier-cover:hsla(var(--base-h),var(--base-s),calc(var(--base-d) + 8%),0.9);
+	--background-modifier-box-shadow:rgba(0, 0, 0, 1); }
+
+/* Desktop font sizes */
+body {
+	--font-adaptive-normal:var(--font-text-size,var(--editor-font-size));
+	--font-adaptive-small: var(--font-ui-medium);
+	--font-adaptive-smaller: var(--font-ui-small);
+	--font-adaptive-smallest: var(--font-ui-smaller);
+	--line-width-wide:calc(var(--line-width) + 12.5%);
+	--font-code:calc(var(--font-adaptive-normal) * 0.9);
+	--table-text-size:calc(var(--font-adaptive-normal) * 0.875); }
+
+
+/* NOTE: custom sizes */
+body {
+	--h1-size: 1.8em;
+	--h2-size: 1.6em;
+	--h3-size: 1.45em;
+	--h4-size: 1.2em;
+	--h5-size: 1.08em;
+	--h6-size: 1em;
+	--h6-color: var(--tx2);
+}
+
+/* INFO: from https://forum.obsidian.md/t/how-to-make-reader-mode-and-edit-mode-line-height-look-the-same/59217/3 */
+
+/* adjust margin between paragraph and ul/ol */
+div:has(> p) ~ div:has(> p) p {
+	margin-top: 12px;
+	margin-block-end: 0;
+}
+div:has(p) + div:has(ul,ol) > :is(ul,ol) {
+	margin-block-start: 0;
+}
+/* adjust margin between headers and ul/ol. Had to use 0.88rem because default app's line-height somehow uses hardcoded 1.4 instead on line-height-normal: 1.5 */
+p {
+	margin: 0 !important;
+}
+
+.markdown-rendered div:has(h1, h2, h3, h4, h5, h6) {
+	margin-top: 1em !important;
+}
+
+.markdown-rendered :is(h1,h2,h3,h4,h5,h6,p) {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.markdown-rendered div:has(ul,ol) :is(ul,ol) {
+	margin-top: 0;
+}
+
+
+/* NOTE: change bullet to dash */
+li::marker,
+.markdown-reading-view ul li .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line .list-bullet::after {
+	height: 1px !important;
+	width: 6px !important;
+	border-radius: 0 !important;
+	background-color: var(--tx2);
+	color: var(--tx2) !important;
+}
+
+.cm-formatting-list.cm-formatting-list-ul {
+	margin-right: 8px;
+}
+.markdown-rendered .list-bullet {
+	margin-right: 8px;
+}
+
+/* NOTE: heavily modified version of https://github.com/NicklasVraa/Obsidian-academic-export */
+@media print {
+	@page {
+		margin: 1.75cm !important;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after:avoid;
+		page-break-inside:avoid;
+		line-height: 1 !important;
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+		margin-top: 20px !important;
+	}
+
+	h1 {
+		text-align: center !important;
+		margin-top: 0px !important;
+		margin-bottom: 0.75em !important;
+	}
+
+	ul, ol, dl {
+		page-break-before: avoid !important;
+		line-height: 1.1 !important;
+		margin-top: 0px !important;
+		padding-top: 0px !important;
+	}
+
+	ul li {
+		list-style-type: none !important;
+		position: relative !important;
+	}
+
+	ul li::before {
+		color: var(--tx2) !important;
+		content: '–' !important;
+		position: absolute !important;
+		left: -1.15em !important;
+	}
+}
+
+hr {
+	margin-top: 0;
+}
+
+/* https://www.reddit.com/r/ObsidianMD/comments/yjg0zz/comment/iuntv1z */
+.graph-view.color-fill-tag {
+	color: var(--tx1);
+}
+
+.graph-view.color-fill {
+	color: var(--tx3);
+}
+
+
+
+.app-container .markdown-preview-view pre.language-note-gray,
+.app-container .markdown-preview-view pre.language-note-brown,
+.app-container .markdown-preview-view pre.language-note-orange,
+.app-container .markdown-preview-view pre.language-note-yellow,
+.app-container .markdown-preview-view pre.language-note-green,
+.app-container .markdown-preview-view pre.language-note-blue,
+.app-container .markdown-preview-view pre.language-note-purple,
+.app-container .markdown-preview-view pre.language-note-pink,
+.app-container .markdown-preview-view pre.language-note-red {
+  background-color: transparent;
+}
+
+.app-container .markdown-preview-view pre.language-note-gray code.language-note-gray,
+.gray {
+  color: var(--txt-3);
+}
+
+.app-container .markdown-preview-view pre.language-note-orange code.language-note-orange,
+.orange {
+  color: var(--color-orange);
+}
+
+.app-container .markdown-preview-view pre.language-note-yellow code.language-note-yellow,
+.yellow {
+  color: var(--color-yellow)
+}
+
+.app-container .markdown-preview-view pre.language-note-green code.language-note-green,
+.green {
+  color: var(--color-green);
+}
+
+.app-container .markdown-preview-view pre.language-note-blue code.language-note-blue,
+.blue {
+  color: var(--color-cyan);
+}
+
+.app-container .markdown-preview-view pre.language-note-purple code.language-note-purple,
+.purple {
+  color: var(--color-purple);
+}
+
+.app-container .markdown-preview-view pre.language-note-pink code.language-note-pink,
+.pink {
+  color: var(--color-pink);
+}
+
+.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
+.red {
+  color: var(--color-red);
+}
+
+
+
+
+
+
+
+/* NOTE: tag */
+.cm-hashtag,
+a.tag {
+	border-radius: 0 !important;
+	color: var(--color-dark-grey);
+	font-family: var(--font-monospace) !important;
+	font-size: 10pt !important;
+	margin-bottom: 12px !important;
+}
+
+.cm-line > .cm-hashtag-begin:not(:first-child),
+p > a.tag:not(:first-child) {
+	margin-left: 4px !important;
+}
+
+
+/* INFO: add spacing/padding to tags */
+.cm-line:has(span.cm-hashtag) {
+	line-height: 1.75em !important;
+}
+
+p:has(a.tag) {
+	margin-bottom: 0.5em !important;
+	line-height: 1.75em !important;
+}
+
+/* callout */
+
+.callout {
+	margin-top: 0.25em;
+	margin-bottom: 0.75em;
+}
+
+
+.callout-title {
+	column-gap: 8px !important;
+	margin-bottom: 8px !important;
+}
+
+
+/* NOTE: custom callout icons */
+.callout svg {
+	fill: none !important;
+}
+
+
+.callout-content {
+	overflow-y: hidden;
+}
+
+
+.callout[data-callout="definition"] {
+	--callout-color: var(--color-pink);
+	--callout-color-bg: var(--color-bg-pink);
+	--callout-margin: 18pt;  /* 18 -> gets auto multiplied into 24 */
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  class="lucide lucide-book-text"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>';
+}
+
+.callout[data-callout="info"],
+.callout[data-callout="lemma"],
+.callout[data-callout="corollary"],
+.callout[data-callout="theorem"],
+.callout[data-callout="method"],
+.callout[data-callout="formula"],
+.callout[data-callout="solution"],
+.callout[data-callout="algorithm"] {
+	--callout-color: var(--color-blue);
+	--callout-color-bg: var(--color-bg-blue);
+	--callout-margin: 18pt;  /* 18 -> gets auto multiplied into 24 */
+	color: var(--tx1);
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3"/><path d="M9 11.2h5.7"/></svg>';
+}
+
+.callout[data-callout="example"],
+.callout[data-callout="eg:"],
+.callout[data-callout="derivation"],
+.callout[data-callout="proof"] {
+	--callout-color: var(--color-dark-grey);
+	--callout-margin: 18pt;  /* 18 -> gets auto multiplied into 24 */
+	color: var(--tx2);
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right"><polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>';
+}
+
+.callout[data-callout="task"] {
+	--callout-color: #7A7A7D;
+	--callout-color-bg: var(--color-bg-grey);
+	--callout-margin: 18pt;  /* 18 -> gets auto multiplied into 24 */
+	color: var(--tx2);
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>';
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="note"] {
+	--callout-color: var(--color-yellow);
+	--callout-color-bg: var(--color-bg-yellow);
+	--callout-margin: 18pt;  /* 18 -> gets auto multiplied into 24 */
+	color: var(--tx2);
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>'
+}
+
+
+
+
+.callout {
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	border-left: 4.5px solid var(--callout-color);
+	background-color: var(--callout-color-bg);
+	padding: 8px;
+	margin: 0;
+	margin-bottom: var(--callout-margin);
+}
+
+.callout-title {
+	background-color: var(--callout-color);
+	color: var(--bg1);
+	width: fit-content;
+
+	justify-items: center;
+	column-gap: 5px !important;
+
+	padding: 1pt 5pt 1pt 3pt;
+}
+
+.callout-title * {
+	font-size: 12pt;
+	font-weight: 500;
+	stroke-width: 1.75pt;
+	color: var(--bg1) !important;
+	text-decoration-color: var(--bg1);
+	outline-color: var(--bg1);
+}
+
+.callout-title-inner {
+	text-transform: lowercase;
+	translate: 0 0.5pt;
+}
+
+
+
+/* remove header margin */
+h1, h2, h3, h4, h5, h6,
+.HyperMD-header, .HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
+	margin: 0 !important;
+}
+
+.el-p {
+	margin-bottom: 18px !important;
+}
+
+.el-p:has(+ :is(.el-ul, .el-ol)) {
+	margin-bottom: 0px !important;
+}
+
+
+/* fix title padding */
+.cm-sizer > .inline-title {
+	padding-top: 16px;
+}
+
+.MathJax {
+	padding: 0px !important;
+	margin: 0px !important;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}
+
+pre {
+	margin: 0 !important;
+}
+
+h3 { padding-top: 24px !important; }
+h4 { padding-top: 18px !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* minimal stuff */
+.status-bar-item.plugin-editor-status {
+	display: none !important;
+}
+
+.workspace-tab-header-container-inner {
+	margin-top: 4px !important;
+	padding-top: 0 !important;
+	padding-bottom: 4px !important;
+}
+
+/* sidebar*/
+.mod-left-split .workspace-tab-header-container {
+	padding-left: 80px !important;
+	padding-right: 0px !important;
+}
+
+.nav-files-container {
+	padding-left: 6px !important;
+	padding-right: 6px !important;
+}
+
+.nav-header {
+	padding: 4px !important;
+	height: 32px !important;
+}
+
+.nav-buttons-container {
+	justify-content: flex-start;
+}
+
+.sidebar-toggle-button, .workspace-tab-header-new-tab {
+	padding: 4px !important;
+}
+
+.workspace-tab-header-new-tab * {
+	height: 24px;
+	margin: 0 !important;
+}
+
+.workspace-tab-header-new-tab {
+	margin-inline-end: 6px !important;
+
+}
+
+
+/* main content bar / tab bar */
+.workspace-tab-header-container {
+	padding: 0 !important;
+}
+
+.workspace-tab-header-container-inner {
+	margin: 0 !important;
+	padding: 4px !important;
+	column-gap: 4px !important;
+}
+
+.workspace-tab-header-inner::after {
+	display: none;
+}
+
+.workspace-tab-header {
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 4px !important;
+	box-shadow: none !important;
+}
+
+.workspace-tab-header.is-active {
+	background-color: var(--bg3) !important;
+}
+
+/* remove curls */
+.workspace-tab-header::after,
+.workspace-tab-header::before {
+	display: none;
+}
+
+
+
+/* centre header */
+.view-header-title-container.mod-at-start {
+	opacity: 0%;
+	transition: opacity 0.15s linear;
+}
+
+.view-header-title-container.mod-at-start:hover {
+	opacity: 100%;
+}
+
+
