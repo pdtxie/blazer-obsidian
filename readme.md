@@ -1,10 +1,8 @@
 # minimal blazer theme for obsidian
 
-- this theme is a *modified version* of the popular [Obsidian Minimal](https://github.com/kepano/obsidian-minimal) theme
-- all credits go to the original authors of the Obsidian Minimal theme, where their license can be found [here](https://github.com/kepano/obsidian-minimal#license)
 - original blazer colourscheme can be found at [gogh-co.github.io](https://gogh-co.github.io/Gogh/), [and their github here](https://github.com/Gogh-Co/Gogh)
-- this is primarily a recolour with the blazer theme, but with many tweaks to the UI
-
+- this is primarily a recolour with my heavily customised version based off of the blazer theme
+- also many UI tweaks (autohide path, less clutter, general less padding/more compact, Favorit font)
 
 ## features
 - reset heading sizes
@@ -12,15 +10,10 @@
 - shortened tab bar height, removed tab bar outline, changed tab bar design
 - signicantly reduced padding/margins on headings
 - reduced padding in callouts
-- custom callout definitions
+- custom callouts!!! 
 - pdf export with same styling
 
 ## screenshots
-### LIGHT THEME
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/95598ae0-a0c3-4edd-8ce5-84aa7cbb1cf4">
-
-### DARK THEME
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/6ed68ed4-269d-4195-866c-65c01919b3f0">
-
-### GRAPH
-<img width="1512" alt="image" src="https://github.com/pdtxie/blazer-obsidian/assets/65262710/1a952f9e-c501-4bbe-bbf4-b583dd46ad80">
+<img width="1222" alt="Screenshot 2025-03-16 at 21 30 04" src="https://github.com/user-attachments/assets/d0f91918-7a3f-4bf3-af0c-5062001a0492" />
+<img width="1222" alt="Screenshot 2025-03-16 at 21 30 19" src="https://github.com/user-attachments/assets/86109c40-005d-488d-8630-ee2d8ee071ca" />
+<img width="1222" alt="Screenshot 2025-03-16 at 21 30 49" src="https://github.com/user-attachments/assets/9c54b4de-c81c-4461-94d0-8ed91af10385" />
